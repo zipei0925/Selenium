@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 
-public class OpenBaiDu {
+public class Selenium01_OpenBaiDu {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","D:\\Google\\Chrome\\Application\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
