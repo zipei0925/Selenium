@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Selenium22_OperatingMenu {
+public class Selenium23_OperatingMenu {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver","D:\\Google\\Chrome\\Application\\chromedriver.exe");
 
