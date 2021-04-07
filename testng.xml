@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="E:/Selenium">
+<!-- Suite相关设置，这里paraller是执行的模式，有tests classes methods三种取值，thread-count表示两个线程执行用例 -->
+<suite name="All Test Suite" parallel="tests" thread-count="2">
+    <test name="Test">
+        <parameter name="Browser" value="Firefox">
         <classes>
-            <class name="selenium.TestNG.TestNG01_Demo">
-                <methods>
-                    <include name="OpenBaidu"/>
-                </methods>
-            </class>
+            <class name="selenium.TestNG.TestNG02_CrossBrowser"/>
         </classes>
+        </parameter>
+    </test>
+
+    <test name="Test1">
+        <parameter name="Browser" value="Chrome">
+            <classes>
+                <class name="selenium.TestNG.TestNG02_CrossBrowser"/>
+            </classes>
+        </parameter>
     </test>
 </suite>
