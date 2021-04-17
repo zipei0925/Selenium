@@ -2,6 +2,7 @@ package selenium.TestNG;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
@@ -12,8 +13,10 @@ public class TestNG02_CrossBrowser {
 
     public void beforeTest(){
         System.out.println("====启动测试====");
+        System.setProperty("webdriver.chrome.driver", ".\\tools\\chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
-
 
     @Test
     //将外部参数"Browser"引入当前的脚本,使其成为一个被共享的变量
@@ -28,9 +31,6 @@ public class TestNG02_CrossBrowser {
             System.out.println("浏览器不存在");
         }
     }
-
-
-
 
     @AfterClass
     public void afterClass() {

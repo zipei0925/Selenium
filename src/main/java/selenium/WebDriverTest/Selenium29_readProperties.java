@@ -12,11 +12,11 @@ public class Selenium29_readProperties {
 
     public static void main(String[] args) throws IOException {
         Properties ppt = new Properties();
-        InputStream ips = new FileInputStream("config.properties");
+        InputStream ips = new FileInputStream(".\\TestConfig\\config.properties");
         ppt.load(ips);
 
         browserName = ppt.getProperty("browserName");
-        serverUrl = ppt.getProperty("serverUrl");
+        serverUrl = ppt.getProperty("serverURL");
 
         System.out.println(browserName);
         System.out.println(serverUrl);
